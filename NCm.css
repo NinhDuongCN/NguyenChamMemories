@@ -46,7 +46,3 @@ body{
     opacity: 20%;
     border-radius: 8vh;
 }
-
-#btnPlayPause:hover{
-    opacity: 100%;
-}
