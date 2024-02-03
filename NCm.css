@@ -1,0 +1,52 @@
+/*
+ * create: 2024-02-03
+ * update:
+ */
+
+@charset "UFT-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Mea+Culpa&display=swap');
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/bgr.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+}
+#msg{
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    font-family: 'Mea Culpa', cursive;
+    font-size: 9vh;
+    color:white;
+    text-shadow: #000000 5px -4px 1em;
+}
+
+#btnPlayPause{
+    height: 8vh;
+    width: auto;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    z-index: 999;
+    opacity: 50%;
+    border-radius: 8vh;
+}
+
+#btnPlayPause:hover{
+    opacity: 100%;
+}

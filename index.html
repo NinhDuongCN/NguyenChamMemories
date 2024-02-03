@@ -4,50 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/icon" href="./images/MemoriesFavicon.svg" />
-    <title>NguyênChâm's Memories</title>
-    <style>
-        @charset "UFT-8";
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Mea+Culpa&display=swap');
-        html{
-            height: 100%;
-            width: 100%;
-        }
-        body{
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            background-image: url("images/bgr.jpg");
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            display: table;
-            text-align: center;
-            vertical-align: middle;
-        }
-        #msg{
-            width: 100%;
-            height: 100%;
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
+    <link type="text/css" rel="stylesheet" href="./NCm.css" />
+    <script type="text/javascript" src="./NCm.js"></script>
 
-            font-family: 'Mea Culpa', cursive;
-            font-size: 9vh;
-            color:white;
-            text-shadow: #000000 5px -4px 1em;
-        }
-    </style>
+    <title>NguyênChâm's Memories</title>
+
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://NguyenChamMemories.id.vn/images/MemoriesFavicon.svg"> <!--để chèn thumbnail mà không được à-->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NguyênChâm's Memories">
+    <meta property="og:url" content="https://NguyenChamMemories.id.vn">
+    <meta property="og:description" content="2024-03-20">
+
 </head>
 <body>
-    <noscript></noscript>
+    <noscript>Cần bật javascript để trang hoạt động đầy đủ</noscript>
     <div id="msg" onclick="div_Clicked()">Coming soon</div>
+
+    <!--play audio-->
+    <img id="btnPlayPause" src="./images/btns/btn_play.svg" onclick="BtnClicked()" tag="pause" />
+    <audio id="au" hidden="true" onended="PlayAudio()" onplay="SetBtnPause()" onpause="SetBtnPlay()" src="#">
+
+
 </body>
 <script language="javascript">
-    function div_Clicked(){
-        window.location = "https://NinhDuongCN.github.io/WDCD";
-    }
+    CreateRandomLstNhac();
+    PlayAudio();
     
 </script>
 </html>
