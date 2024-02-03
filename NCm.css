@@ -43,7 +43,7 @@ body{
     bottom: 20px;
     position: fixed;
     z-index: 999;
-    opacity: 50%;
+    opacity: 20%;
     border-radius: 8vh;
 }
 
