@@ -1,6 +1,6 @@
 /*
  * create: 2024-02-03
- * update: 
+ * update: 2024-02-10: bổ sung bài số 119.
  */
 
 function div_Clicked(){
@@ -10,7 +10,7 @@ function div_Clicked(){
 //
 //#region play_audio
 //
-//var audioCount = 119; //Số lượng bài hát trong danh sách; NHỚ THÊM GIÁ TRỊ TRONG MẢNG tmplstNhac Ở HÀM CreateRandomLstNhac
+//var audioCount = 120; //Số lượng bài hát trong danh sách; NHỚ THÊM GIÁ TRỊ TRONG MẢNG tmplstNhac Ở HÀM CreateRandomLstNhac
 var imgPlay = "./images/btns/btn_play.svg";
 var imgPause = "./images/btns/btn_pause.svg";
 var isPlaying = false;
@@ -29,11 +29,11 @@ function CreateRandomLstNhac()
                        80,  81,  81,  83,  84,  85,  86,  87,  88,  89,
                        90,  91,  92,  93,  94,  95,  96,  97,  98,  99,
                       100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
-                      110, 111, 112, 113, 114, 115, 116, 117, 118
+                      110, 111, 112, 113, 114, 115, 116, 117, 118, 119
                      ];
 
     //lstNhac = new Array();
-    for(var i = 0; i < 119 /*audioCount*/; i++)
+    for(var i = 0; i < 120 /*audioCount*/; i++)
     {
         lstNhac.push(tmplstNhac.splice(Math.floor(Math.random() * tmplstNhac.length), 1));
     }
