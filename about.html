@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="./images/MemoriesFavicon.svg" />
+    <title>NguyênChâm's Memories - About</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Lobster&display=swap');
+        @font-face{font-family:Raleway; src:url('./fonts/Raleway-Regular.ttf') format('truetype');}
+        @font-face{font-family:Lobster; src:url('./fonts/Lobster-Regular.ttf') format('truetype');}
+        
+        html{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            width: 100%;
+            min-width: 320px;
+            margin: 0;
+            padding: 0;
+            background-image: url("images/bgr.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            display: table;
+            vertical-align: middle;
+        }
+        #content{
+            margin: 2%;
+            display: block;
+            background: rgba(245,245,245,0.15);
+            box-shadow: 
+                0px 2px 10px rgba(0,0,0,0.2), 
+                0px 10px 20px rgba(0,0,0,0.3), 
+                0px 30px 60px 1px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            padding: 25px;
+            color:white;
+            text-shadow: #000000 5px -4px 1.5em;
+        }
+        h1{
+            margin: top 15px;
+            text-align: center;
+            font-size: 8vw;
+            font-family: 'Lobster', cursive;
+            color: white;
+            /*text-shadow: #000000 5px -4px 1em;*/
+        }
+        p{
+            text-align: justify;
+            font-family: 'Raleway', cursive;
+            font-size: 3vh;
+            /*text-shadow: #000000 5px -4px 1.5em;*/
+        }
+        #footer{
+            display: block;
+            padding: 22px 0 0 0;
+            /*background: rgba(245,245,245,0.1);*/
+            font-size: 3vh;
+            font-style: italic;
+            color: #ffff00;
+            text-align: right;
+        }
+        a{
+            color: #ffff00;
+            font-style: italic;
+            text-decoration: none;
+        }
+        @media screen and (orientation: portrait) {
+            #footer{
+                font-size: 2vh;
+            }
+            p{
+                font-size: 2.5vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <a href="https://www.NguyenChamMemories.id.vn">Goto Homepage</a>
+    </noscript>
+    <div id="content" onclick="div_Clicked()">
+        <h1 onclick="div_Clicked()">NguyênChâm's Memories</h1>
+        <p>NguyenChamMemories.id.vn và các trang thành phần (sau đây gọi chung là NCm) được được tạo nên với mục đích để lưu trữ kỷ niệm cá nhân, không được sử dụng cho mục đích thương mại, quảng cáo hay cung cấp thông tin tổng hợp.</p>
+        <p>NCm không sử dụng cookie, không tự động thu thập dữ liệu từ thiết bị truy cập ngoại trừ các thông tin người dùng nhập và gửi đi từ một số biểu mẫu khảo sát được tạo bởi NCm.</p>
+        <p>NCm sử dụng một số dữ liệu âm thanh được sưu tầm từ các nguồn khác nhau trên internet để sử dụng cá nhân, không nhằm mục đích thương mại, quảng cáo hay chia sẻ.</p>
+        <div id="footer">Created by <a class="linkProfile" href="https://fb.me/N7023C">Nguyên</a> with ♥ for <a class="linkProfile" href="https://fb.me/C7023N">Châm</a></div>
+    </div>
+    
+
+    <!--<div id="msg" onclick="div_Clicked()">404</div>-->
+</body>
+<script language="javascript">
+    function div_Clicked(){
+        window.location = "https://www.NguyenChamMemories.id.vn";
+    }
+</script>
+</html>
