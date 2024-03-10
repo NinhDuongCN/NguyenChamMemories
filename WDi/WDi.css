@@ -22,10 +22,10 @@ body{
     padding: 0;
     background-color: #ffffe0;
 
-    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    user-select: none;
 }
 
 .secCover{
@@ -44,12 +44,14 @@ body{
     min-width: 320px;
     margin: 0;
     background-color: #ffffe0;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-evenly;
 }
 
 .profileCard{
     aspect-ratio: 9 / 16;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content:end;
@@ -84,6 +86,7 @@ body{
 .profileCard>.contactBtn{
     height: 6.25%;
     padding: 0 5% 10% 5%;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -179,6 +182,7 @@ h2{
 }
 
 #timeleft{
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -268,7 +272,7 @@ article>h1{
     -khtml-user-select: none;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+    /*-webkit-tap-highlight-color: transparent;*/
 }
 
 
@@ -287,6 +291,9 @@ article>h1{
     background-size: contain;
     height: 100%;
     position: relative;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all easr 0.5;
     transition: all ease 0.5s;
 }
 
@@ -335,6 +342,7 @@ article>h1{
     background-position: top center;
     background-repeat: no-repeat;
 
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content:end;
@@ -342,6 +350,7 @@ article>h1{
 }
 
 .secConfirm>article{
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -356,8 +365,8 @@ article>h1{
     
     border: 1px solid #ffffff;
     background: transparent;
-    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     border-radius: 8px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.2), 
                 0px 10px 20px rgba(0,0,0,0.3), 
@@ -509,6 +518,7 @@ footer{
 @media screen and (orientation: landscape){
     #secInfo{
         height: 90%;
+        display: -webkit-flex;
         display: flex;
         flex-direction: row;
     }
@@ -556,6 +566,7 @@ footer{
 @media screen and (orientation: portrait){
     #secInfo{
         width: 90%;
+        display: -webkit-flex;
         display: flex;
         flex-direction: column;
         margin-left: 5%;
