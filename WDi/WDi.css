@@ -252,7 +252,8 @@ article>h1{
     background: transparent;
     width: 100%;
     aspect-ratio: 1080 / 1920;
-    background-image: url('./imgs/story_p.svg');
+    /*background-image: url('./imgs/story_p.svg');*/
+    background-image: url('./imgs/story_p.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

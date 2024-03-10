@@ -150,7 +150,7 @@
     <section class="secOther">
         
         <img id="btnPlayPause" src="../images/btns/btn_play.svg" onclick="BtnAudioClicked()" tag="pause" />
-        <audio id="au" hidden="true" onended="PlayAudio()"  src="#">
+        <audio id="au" hidden="true" onended="PlayAudio()" onplaying="SetBtnPause()" src="#">
     </section>
 </body>
 <script language="javascript">

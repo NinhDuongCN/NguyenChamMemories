@@ -230,13 +230,13 @@ function PlayAudio()
 }
 
 function BtnAudioClicked(){
-    document.getElementById("btnPlayPause").hidden = true;
+    //document.getElementById("btnPlayPause").hidden = true;
     PlayAudio();
 }
 
-// function SetBtnPause()
-// {
-//     //document.getElementById("btnPlayPause").setAttribute("src", imgPause);
-//     isPlaying = true;
-//     document.getElementById("btnPlayPause").hidden = true;
-// }
+function SetBtnPause()
+{
+    //document.getElementById("btnPlayPause").setAttribute("src", imgPause);
+    //isPlaying = true;
+    document.getElementById("btnPlayPause").hidden = true;
+}
