@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href= "../images/WDiFavicon.svg" />
+    <link type="text/css" rel="stylesheet" href="./WDi.css" />
+    <script type="text/javascript" src="./WDi.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>NguyênChâm 20-03-2024</title>
+
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://www.NguyenChamMemories.id.vn/WDi/imgs/thumbnail.png"> 
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NguyênChâm">
+    <meta property="og:url" content="https://NguyenChamMemories.id.vn/WDi">
+    <meta property="og:description" content="Thiệp mời điện tử của Nguyên&Châm">
+</head>
+<body>
+    <noscript>Trang hoạt động tốt nhất trên trình duyệt Chrome và bật javascript</noscript>
+    <section class="secCover" id="secCover">
+       <!-- <p>NguyênChâm's Wedding</p>-->
+    </section>
+    <section class="secContent info" id="secInfo">
+        <div class="profileCard" id="groom">
+            <span>Liên hệ</span>
+            <div class="contactBtn">
+                <a class="info p N" onclick="Contact('pN')"></a>
+                <a class="info m N" onclick="Contact('mN')"></a>
+                <a class="info z N" onclick="Contact('zN')"></a>
+                <a class="info f N" onclick="Contact('fN')"></a>
+                <a class="info l N" onclick="Contact('lN')"></a>
+            </div>
+        </div>
+        <div class="profileCard" id="bride">
+            <span>Liên hệ</span>
+            <div class="contactBtn">
+                <a class="info p C" onclick="Contact('pC')"></a>
+                <a class="info m C" onclick="Contact('mC')"></a>
+                <a class="info z C" onclick="Contact('zC')"></a>
+                <a class="info f C" onclick="Contact('fC')"></a>
+                <a class="info l C" onclick="Contact('lC')"></a>
+            </div>
+        </div>
+    </section>
+    <section class="secContent invi" id="secInvi">
+        <article>
+            <p>Mùa xuân là mùa khởi đầu của một năm, là mùa mà vạn vật sinh sôi, nảy nở; là biểu trưng cho khởi đầu mới với sức sống tươi trẻ, hi vọng và phát triển.</p>
+            <p>Mùa xuân có một ngày đặc biệt. Là ngày mặt trời ở vị trí ngang đường xích đạo, độ dài ngày, đêm bằng nhau, khí trời trong lành, biểu trưng cho sự cân bằng, hài hòa của vũ trụ. Được chọn là ngày Quốc tế Hạnh phúc nhằm tôn vinh, phát triển và nâng cao hạnh phúc của nhân loại toàn cầu.</p>
+            <p>Và ngày đặc biệt ấy cũng được lựa chọn để đánh dấu một chặng đường mới trong cuộc đời của <span class="NC">Châm</span> và <span class="NC">Nguyên</span>.</p>
+            <p id="ourDate">20 - 3 - 2024</p>
+            <div id="countdown">
+                <h2>Cùng đếm ngược</h2>
+                <div id="timeleft">
+                    <div class="timeCard" id="day">
+                        <p class="tlvalue" id="ngay">00</p>
+                        <p class="tllable">ngày</p>
+                    </div>
+                    <div class="timeCard" id="hour">
+                        <p class="tlvalue" id="gio">00</p>
+                        <p class="tllable">giờ</p>
+                    </div>
+                    <div class="timeCard" id="min">
+                        <p class="tlvalue" id="phut">00</p>
+                        <p class="tllable">phút</p>
+                    </div>
+                    <div class="timeCard" id="sec">
+                        <p class="tlvalue" id="giay">00</p>
+                        <p class="tllable">giây</p>
+                    </div>
+                </div>
+            </div>
+            <h1>Trân trọng kính mời đến dự và chung vui cùng gia đình!</h1>
+            <div id="WDtimeline">
+                <h2>Thời gian cử hành</h2>
+                <div id="timeline"></div>
+            </div>
+        </article>
+    </section>
+    <section class="secContent story" id="secStory">
+        <article id="loveStory">
+            <h1>Hành trình</h1>
+            <!-- <img id="story" src="./imgs/story_l.svg"/> -->
+            <div id="story"></div>
+        </article>
+    </section>
+    <section class="secContent gallery" id="secGallery">
+        <article id="photoGallery">
+            <div id="boxShow">
+                <div class="photoShow" id="photoShow">
+                    <div class="photo" id="p0"></div>
+                </div>
+                <div id="gBtn">
+                    <div class="gBtn" id="btnPre" onclick="PrePhoto()"></div>
+                    <div class="gBtn" id="btnNxt" onclick="NextPhoto()"></div>
+                </div>
+            </div>  
+        </article>
+    </section>
+    <section class="secConfirm" id="secConfirm">
+        <article>
+            <form id="frmConfirm" method="post">
+                <div class="frmItem txt">
+                    <!-- <label for="Name">Quý danh*</label> -->
+                    <input type="text" class="inp" id="Name" name="Name" placeholder="Tên" />
+                </div>
+                <div class="frmItem txt">
+                    <!-- <label for="Phone">Số điện thoại</label> -->
+                    <input type="tel" class="inp" id="Phone" name="Phone" placeholder="Số điện thoại"/>
+                </div>
+                <div class="frmItem rtxt">
+                    <!-- <label for="Wish">Lời chúc</label> -->
+                    <textarea type="text" class="inp" id="Wish" name="Wish" placeholder="Lời chúc"></textarea>
+                </div>
+                <div class="frmItem cbb">
+                    <select class="inp" id="Join" name="Join" onchange ="selectConfirm()"">
+                        <option value="nhà trai">Tôi sẽ đến dự tại nhà trai</option>
+                        <option value="nhà gái">Tôi sẽ đến dự tại nhà gái</option>
+                        <option value="chưa biết">Tôi sẽ sắp xếp và thông báo sau</option>
+                        <option value="không">Tôi không tham dự được</option>
+                    </select>
+                </div>
+                <div class="frmItem cbb">
+                    <select class="inp" id="Number" name="Number">
+                        <option value="0">Tôi sẽ thông báo số lượng sau</option>
+                        <option value="1" selected>Tôi đi một mình</option>
+                        <option value="2">Tôi sẽ đi cùng 1 người</option>
+                        <option value="3">Tôi sẽ đi cùng 2 người</option>
+                        <option value="4">Tôi sẽ đi cùng 3 người</option>
+                        <option value=">4">Tôi sẽ đi cùng nhiều hơn 3 người</option>
+                    </select>
+                </div>
+                <div class="frmItem btn">
+                    <button type="button" class="btn" id="btnSend" onclick="SendWish()">Gửi</button>
+                </div>
+                <span class="frmNote">Tên và lời chúc sẽ được hiển thị công khai</span>
+            </form>
+            <div class="wishes" id="boxWishes">
+                <div class="comment blank" id="newCmt"></div>
+                <div id="letTheFirstCmt">Hãy là người đầu tiên để lại lời chúc</div>
+            </div>
+        </article>
+        <footer class="footer" id="footer">
+            Created by <a class="linkProfile" href="https://fb.me/N7023C" target="_blank">Nguyên</a> with ♥ for <a class="linkProfile" href="https://fb.me/C7023N" target="_blank">Châm</a>
+        </footer>
+    </section>
+    <section class="secOther">
+        
+        <img id="btnPlayPause" src="../images/btns/btn_play.svg" onclick="BtnAudioClicked()" tag="pause" />
+        <audio id="au" hidden="true" onended="PlayAudio()"  src="#">
+    </section>
+</body>
+<script language="javascript">
+    setInterval(Countdown, 1000);
+    CreateListPhoto();
+    setInterval(NextPhoto, 10000);
+    CreateRandomLstNhac();
+    BtnAudioClicked();
+    GetWishes();
+</script>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="fb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0866ff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="facebook">
+    <circle class="cls-1" cx="60" cy="60" r="60"/>
+    <path id="f" class="cls-2" d="m83.5,78.34l3.37-18.34h-19.6v-6.48c0-9.69,3.8-13.42,13.64-13.42,3.06,0,5.52.07,6.93.22v-16.62c-2.68-.75-9.24-1.49-13.04-1.49-20.05,0-29.29,9.47-29.29,29.89v7.9h-12.37v18.34h12.37v39.9c4.64,1.15,9.5,1.77,14.49,1.77,2.46,0,4.89-.15,7.27-.44v-41.23h16.23Z"/>
+  </g>
+</svg>

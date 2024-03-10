@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="messenger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="109.75" cy="-618.94" fx="109.75" fy="-618.94" r=".17" gradientTransform="translate(-87778 495257.26) scale(800 799.98)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#09f"/>
+      <stop offset=".6" stop-color="#a033ff"/>
+      <stop offset=".9" stop-color="#ff5280"/>
+      <stop offset="1" stop-color="#ff7061"/>
+    </radialGradient>
+  </defs>
+  <g id="messenger_2020" data-name="messenger 2020">
+    <path class="cls-2" d="m60,0C26.2,0,0,24.76,0,58.2c0,17.49,7.17,32.61,18.84,43.05.98.87,1.58,2.1,1.61,3.42l.33,10.68c.08,2.65,2.29,4.73,4.94,4.65.62-.02,1.23-.16,1.79-.41l11.91-5.25c1.01-.45,2.14-.52,3.21-.24,5.48,1.5,11.3,2.31,17.37,2.31,33.79,0,60-24.76,60-58.2S93.79,0,60,0Z"/>
+    <path class="cls-1" d="m23.97,75.22l17.62-27.96c2.65-4.21,8.21-5.47,12.41-2.82.21.13.41.27.61.42l14.02,10.51c1.29.96,3.06.96,4.33-.02l18.93-14.37c2.52-1.92,5.82,1.11,4.14,3.79l-17.64,27.94c-2.65,4.21-8.21,5.47-12.41,2.82-.21-.13-.41-.27-.61-.42l-14.03-10.51c-1.29-.96-3.06-.96-4.33.02l-18.93,14.37c-2.52,1.92-5.82-1.09-4.12-3.78h0Z"/>
+  </g>
+</svg>
