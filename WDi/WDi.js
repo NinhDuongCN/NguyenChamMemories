@@ -221,7 +221,7 @@ function CreateRandomLstNhac()
 function PlayAudio()
 {
     var aud = document.getElementById("au");
-    aud.setAttribute("src", "../audios/" + lstNhac.shift());
+    aud.setAttribute("src", "../audios/" + lstNhac[0]);
     aud.play();
     if(lstNhac.length === 0)
     {
@@ -238,5 +238,6 @@ function SetBtnPause()
 {
     //document.getElementById("btnPlayPause").setAttribute("src", imgPause);
     //isPlaying = true;
+    lstNhac.shift();
     document.getElementById("btnPlayPause").hidden = true;
 }
