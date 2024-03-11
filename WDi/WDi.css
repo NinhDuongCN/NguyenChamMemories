@@ -81,13 +81,14 @@ body{
     font-size: small;
     font-weight: 600;
     line-height: 2.5;
-
+    margin-bottom: 0px;
     text-align: center;
 }
 
 .profileCard>.contactBtn{
     height: 6.25%;
     padding: 0 5% 10% 5%;
+    margin-bottom: 0px;
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
