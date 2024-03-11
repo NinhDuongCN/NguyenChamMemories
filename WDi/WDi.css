@@ -50,7 +50,9 @@ body{
 }
 
 .profileCard{
-    aspect-ratio: 9 / 16;
+    height: calc(90vh - 11px);
+    width: calc(50.625vh - 6.1875px);
+    /*aspect-ratio: 9 / 16;*/
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -95,7 +97,8 @@ body{
 .profileCard>.contactBtn>a{
     display: block;
     height: 100%;
-    aspect-ratio: 1;
+    /*aspect-ratio: 1;*/
+    width: 12.345679%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
