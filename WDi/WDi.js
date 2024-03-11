@@ -210,7 +210,7 @@ var lstNhac = new Array();
 function CreateRandomLstNhac()
 {
     var tmplstNhac = [ 0, 3, 8, 14, 21, 51, 57, 96, 104, 120];
-    lstNhac.push(61);
+    lstNhac = [61];
 
     for(var i = 1; i < audioCount; i++)
     {
@@ -223,10 +223,6 @@ function PlayAudio()
     var aud = document.getElementById("au");
     aud.setAttribute("src", "../audios/" + lstNhac[0]);
     aud.play();
-    if(lstNhac.length === 0)
-    {
-        CreateRandomLstNhac();
-    }
 }
 
 function BtnAudioClicked(){
@@ -239,5 +235,9 @@ function SetBtnPause()
     //document.getElementById("btnPlayPause").setAttribute("src", imgPause);
     //isPlaying = true;
     lstNhac.shift();
+    if(lstNhac.length === 0)
+    {
+        CreateRandomLstNhac();
+    }
     document.getElementById("btnPlayPause").hidden = true;
 }
