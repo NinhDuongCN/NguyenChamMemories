@@ -254,7 +254,8 @@ article>h1{
 #story{
     background: transparent;
     width: 100%;
-    aspect-ratio: 1080 / 1920;
+    height: calc(80vw / 0.5625);
+    /*aspect-ratio: 1080 / 1920;*/
     /*background-image: url('./imgs/story_p.svg');*/
     background-image: url('./imgs/story_p.png');
     background-size: cover;
@@ -282,7 +283,8 @@ article>h1{
 
 #photoShow{    
     width: 100%;
-    aspect-ratio: 9 / 16;
+    height: calc(80vw * 16 / 9);
+    /*aspect-ratio: 9 / 16;*/
     background: transparent;
     border: none;
     overflow: hidden;
@@ -537,7 +539,8 @@ footer{
     }
 
     #photoShow{
-        aspect-ratio: 16 /9;
+        height: calc(80vw * 9 / 16);
+        /*aspect-ratio: 16 /9;*/
     }
 
     p#ourDate{
@@ -549,7 +552,8 @@ footer{
     }
 
     #story{
-        aspect-ratio: 1920 / 565;
+        height: calc(80vw / 1920 * 565);
+        /*aspect-ratio: 1920 / 565;*/
         background-image: url('./imgs/story_l.svg');
         background-position: top center;
     }
