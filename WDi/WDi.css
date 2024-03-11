@@ -50,8 +50,8 @@ body{
 }
 
 .profileCard{
-    height: calc(90vh - 11px);
-    width: calc(50.625vh - 6.1875px);
+    width: 90vw;
+    height: 160vw;
     /*aspect-ratio: 9 / 16;*/
     display: -webkit-flex;
     display: flex;
@@ -525,6 +525,11 @@ footer{
         display: -webkit-flex;
         display: flex;
         flex-direction: row;
+    }
+
+    .profileCard{
+        height: calc(90vh - 11px);
+        width: calc(50.625vh - 6.1875px);
     }
 
     #WDtimeline>#timeline{
