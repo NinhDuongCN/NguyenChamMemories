@@ -5,59 +5,7 @@ function CreateCmt(cmtName, cmtWish){
 }
 
 function SendWish(){
-    //check
-    var cmtName = document.querySelector('#Name').value;
-    if(cmtName == undefined){
-        //không thỏa mãn
-        alert("Vui lòng để lại quý danh");
-        return;
-    }
-    if((cmtName = cmtName.trim()).length < 2){
-        alert("Vui lòng để lại quý danh");
-        return;
-    }
-    var cmtWish = document.querySelector('#Wish').value; //lời chúc có thể để trống.
-
-    //gửi data
-    var btnSend = document.querySelector('#btnSend');
-    btnSend.setAttribute('disabled','true');
-    btnSend.innerHTML="Đang gửi";
-    let data= $('#frmConfirm').serialize();
-    $.ajax({ //Sử dụng Ajax gửi data
-        url: 'https://script.google.com/macros/s/AKfycbz4iOwfAfEL5SzyrdQmcurEbYAmQedKWCYLXIWIq3cGPlJnUW9g6Q1VnpLl2CsUEhlyXQ/exec',
-        method: "GET",
-        dataType: 'json',
-        data: data,
-        success: function(responseData, textStatus, jqXHR) {
-            btnSend.innerHTML="Gửi";
-            btnSend.removeAttribute('disabled');
-            if(textStatus!='success'){
-                alert('Thông tin chưa được gửi đi, vui lòng thử lại.');
-            }
-            else{
-                alert('Thông tin đã gửi thành công. Chân thành cảm ơn!');
-                if(cmtWish== undefined) return;
-                if((cmtWish = cmtWish.trim()) != ''){
-                    var nc = document.querySelector('#newCmt');
-                    var nn = nc.cloneNode();
-                    nc.innerHTML = CreateCmt(cmtName, cmtWish);
-                    nc.setAttribute('class', 'comment');
-                    var fstWish= document.querySelector('#letTheFirstCmt');
-                    if(fstWish!=undefined){
-                        fstWish.hidden = true;
-                    }
-                    document.querySelector("#boxWishes").insertBefore(nn, nc);
-                    nc.removeAttribute('id');
-                    //nc.attributes['class'] = 'comment';
-                }
-            }
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            btnSend.innerHTML="Gửi";
-            alert('Không gửi được thông tin. Hãy thử đăng nhập tài khoản Google trước');
-            console.log(errorThrown);
-        }
-    });
+    alert("Lễ cưới đã được diễn ra thành công. Chức năng tạm khóa. Vui lòng liên hệ chủ sở hữu");
 }
 
 function GetWishes(){
@@ -97,36 +45,21 @@ function ShowWishes(wishes){
 
 
 function Contact(p){
+    alert("Thông tin liên hệ đã được ẩn, đề nghị liên hệ chủ sở hữu");
     switch(p){
         case 'pN':
-            window.open('tel:0364893456','_blank');
-            break;
         case 'mN':
-            window.open('https://m.me/N7023C', '_blank');
-            break;
         case 'zN':
-            window.open('https://zalo.me/0364893456', '_blank');
-            break;
+        case 'lN':
         case 'fN':
             window.open('https://fb.me/N7023C', '_blank');
             break;
-        case 'lN':
-            window.open('https://www.google.com/maps/dir//20.7764444,106.38075', '_blank');
-            break;
         case 'pC':
-            window.open('tel:0388761666','_blank');
-            break;
         case 'mC':
-            window.open('https://m.me/C7023N', '_blank');
-            break;
         case 'zC':
-            window.open('https://zalo.me/0388761666', '_blank');
-            break;
+        case 'lC':
         case 'fC':
             window.open('https://fb.me/C7023N', '_blank');
-            break;
-        case 'lC':
-            window.open('https://www.google.com/maps/dir//20.746093,106.355293', '_blank');
             break;
     }
 }
