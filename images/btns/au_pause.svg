@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="24" y="4.6" width="24" height="110.89" rx="4.42" ry="4.42"/>
+  <rect class="cls-1" x="72" y="4.6" width="24" height="110.89" rx="4.42" ry="4.42"/>
+</svg>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://NinhDuongCN.github.io/WDCD/icon/favicon.png"> <!--để chèn thumbnail mà không được à-->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="670231">
+    <meta property="og:url" content="https://www.NguyenChamMemories.id.vn/WD">
+    <meta property="og:description" content="NguyênChâm">
+    <title>670231</title>
+    <link rel="shortcut icon" type="image/icon" href="./icon/favicon.svg" />
+    <link type="text/css" rel="stylesheet" href="./WD.css" />
+    <script type="text/javascript" src="./WD.js"></script>
+</head>
+<body>
+    <noscript>Cần bật javascript để trang hoạt động</noscript>
+    <div id="div1" onclick="div1_Clicked()">
+        <div id="div2">
+            <span style="font-size: 8vw">Love you to the Moon and back!</span>
+            <ul id="count">
+                <li id="ngay" class="time">22</li>
+                <li id="lblN" class="lableT">ngày </li>
+                <li id="gio" class="time">22</li>
+                <li id="lblG" class="lableT">giờ </li>
+                <li id="phut" class="time">22</li>
+                <li id="lblP" class="lableT">phút </li>
+                <li id="giay" class="time">22</li>
+                <li id="lblGiay" class="lableT">giây</li>
+            </ul>
+        </div>
+    </div>
+
+    <img id="btnPlayPause" src="../images/btns/btn_play.svg" onclick="BtnClicked()" tag="pause" />
+
+    <audio id="au" hidden="true" onended="PlayAudio()" onplay="SetBtnPause()" onpause="SetBtnPlay()" src="#">
+        
+    </audio>
+</body>
+<script language="javascript">
+    Count();
+    setInterval(Count, 1000);
+    CreateRandomLstAnh();
+    ChangeBackground();
+    CreateRandomLstNhac();
+    PlayAudio();
+</script>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m97.53,55.58L16.98,5.18c-3.47-2.17-7.98.32-7.98,4.42v100.81c0,4.1,4.51,6.59,7.98,4.42l80.55-50.4c3.26-2.04,3.26-6.8,0-8.84Z"/>
+  <rect class="cls-1" x="89.04" y="4.72" width="21.96" height="110.55" rx="4.22" ry="4.22"/>
+</svg>

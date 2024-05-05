@@ -6,6 +6,7 @@
 @charset "UFT-8";
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Mea+Culpa&display=swap');
 @font-face { font-family: 'Mea Culpa'; src: url('./fonts/MeaCulpa-Regular.ttf') format('truetype');}
+@font-face { font-family: Lora; src: url('./fonts/Lora-VariableFont_wght.ttf') format('truetype');}
 html{
     height: 100%;
     width: 100%;
@@ -20,11 +21,17 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    display: table;
-    text-align: center;
-    vertical-align: middle;
 }
-#msg{
+/* *{
+    -webkit-transition: all ease 0.15s;
+    -moz-transition: all ease 0.15s;
+    -o-transition: all ease 0.15s;
+    transition: all ease 0.15s;
+} */
+
+
+
+/* #msg{
     width: 100%;
     height: 100%;
     display: table-cell;
@@ -34,9 +41,9 @@ body{
     font-size: 9vh;
     color:white;
     text-shadow: #000000 5px -4px 1em;
-}
+} */
 
-#btnPlayPause{
+/* #btnPlayPause{
     height: 8vh;
     width: auto;
     right: 20px;
@@ -45,4 +52,358 @@ body{
     z-index: 999;
     opacity: 50%;
     border-radius: 8vh;
+} */
+
+.container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#divbgr{
+    height: 100%;
+}
+
+#audioController{
+    background-color: rgba(0, 0, 0, 0.22);
+    height: 12vw;
+    padding: 2vw 0;
+    width: 51vw;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+    border-radius: 12vw;
+    margin-left: 50%;
+    
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    transform: translateX(-50%);
+    margin-bottom: 2vw;
+}
+
+#audioController>p{
+    display: none;
+}
+
+.ctrlBtn{
+    height: 10vw;
+    width: 10vw;
+    margin: 1vw 2vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+
+    -webkit-transition: all ease 0.15s;
+    -moz-transition: all ease 0.15s;
+    -o-transition: all ease 0.15s;
+    transition: all ease 0.15s;
+}
+
+.ctrlBtn#btnComment{
+    background-image: url('./images/btns/au_comment.svg');
+}
+
+.ctrlBtn#btnPlayPause{
+    background-image: url('./images/btns/au_play.svg');
+}
+
+.ctrlBtn#btnNext{
+    background-image: url('./images/btns/au_next.svg');
+}
+
+.app{
+    height: 15vw;
+    width: 15vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+    margin: 1.5vw 1.5vw;
+    
+}
+.app#blank{
+    cursor: context-menu;
+    background: none;
+}
+.app#WDCD{
+    background-image: url('https://wdcd.nguyenchammemories.id.vn/icon/favicon.svg');
+
+}
+.app#proposal{
+    background-image: url('https://proposal.nguyenchammemories.id.vn/icon/favicon.svg');
+}
+.app#NCm{
+    background-image: url('./images/MemoriesFavicon.svg');
+}
+.app#WDi{
+    background-image: url('./images/WDiFavicon.svg');
+}
+.app#WD{
+    background-image: url('./images/WDfavicon.svg');
+}
+.app#LanHuoLong{
+    background-image: url('./images/HuoLongFavicon.svg');
+}
+
+#divMain{
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+    position: fixed;
+}
+
+#appGroup{
+    width: 100%;
+    margin-bottom: 3vh;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    
+   
+}
+
+@supports (display:grid){
+    .app{
+        margin: auto;
+    }
+    #appGroup{
+        display: grid;
+        grid-template-columns: 18vw 18vw 18vw 18vw 18vw;
+        grid-template-rows: 18vw 18vw;
+        justify-items: center;
+    }
+    .app#NCm{
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    .app#WDCD{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .app#proposal{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .app#WDi{
+        grid-area: 2 / 4 / 3 / 5;
+    }
+    .app#WD{
+        grid-area: 2 / 5 / 3 / 6;
+    }
+    .app#LanHuoLong{
+        grid-area: 1 / 5 / 2 / 6;
+    }
+}
+
+.popup{
+    position: fixed;
+    width: 80%;
+    
+    background-color: #ffffe0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 0 10px 10px 15px;
+    display: block;
+    opacity: 0%;
+    z-index: 2003;
+
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.popup.active{
+    opacity: 100%;
+}
+
+.popup>p#poptitle::after{
+    content: "NguyênChâm's Memories";
+    font-weight: bold;
+    line-height: 0ch;
+}
+
+.popup>p#popmsg::before{
+    content: "Sự kiện sắp tới: ";
+    text-indent: 4ch;
+    line-height: 3ch;
+}
+
+.popup>p{
+    line-height: 1ch;
+    font-family: 'Lora', sans-serif;
+
+}
+
+
+@media screen and (orientation: portrait) {
+    .popup{
+        left: 50%;
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%); 
+
+        top: -25vh;
+    }
+
+    .popup.active{
+        top: 1vh;
+    }
+}
+
+@media screen and (orientation: landscape){
+    .popup{
+        bottom: 2vh;
+        right: -27vw;
+        width: 25vw;        
+    }
+
+    .popup.active{
+        right: 1vw;
+    }
+
+    #audioController{
+        height: fit-content;
+        padding: 1.5vh 4.5vh 0.5vh 4.5vh;
+        width: 40vh;
+        display: flex;
+        display: -webkit-flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: none;
+        border-radius: 7.5vh;
+        margin-left: 50%;
+
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform:translateX(-50%);
+        transform: translateX(-50%);
+    
+    }
+
+    #audioController>p{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: 'Mea Culpa', cursive;
+        font-size: 3.5vh;
+        color:white;
+        text-shadow: #000000 5px -4px 1em;
+        margin: 1vh 0 0 0;
+        cursor: context-menu;
+    }
+
+    .ctrlBtn{
+        height: 7vh;
+        width: 7vh;
+        margin: 0 2vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        cursor: pointer;
+    }
+
+    .ctrlBtn#btnComment{
+        -o-transform: translateY(15%) scale(0.9);
+        -ms-transform: translateY(15%) scale(0.9);
+        -moz-transform: translateY(15%) scale(0.9);
+        -webkit-transform: translateY(15%) scale(0.9);
+        transform: translateY(15%) scale(0.9);
+    }
+    .ctrlBtn#btnNext{
+        -o-transform: translateY(10%) scale(0.8);
+        -ms-transform: translateY(10%) scale(0.8);
+        -moz-transform: translateY(10%) scale(0.8);
+        -webkit-transform: translateY(10%) scale(0.8);
+        transform: translateY(10%) scale(0.8);
+    }
+    .ctrlBtn#btnPlayPause{
+        background-color: rgba(255, 255, 255, 0.22);
+        border-radius: 50%;
+        background-size: 70%;
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    .ctrlBtn#btnPlayPause:hover{
+        background-color: rgba(255, 255, 255, 0.32);
+    }
+
+    #appGroup{
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 2vh;
+        margin-left: 50%;
+
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.22);
+        border-radius: 3vh;
+        padding: 1vh 2vh;
+
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        justify-content: center;
+        
+    }
+
+    .app{
+        height: 7vh;
+        width: 7vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        cursor: pointer;
+        margin: 0 0.5vh;
+    }
+
+    .app:hover{
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        margin: 0 1vh;
+    }
+
+    .app#blank{
+        height: 0;
+        width: 0;
+        margin: 0;
+    }
+    #divMain{
+        width: fit-content;
+        margin-left: 50%;
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
 }

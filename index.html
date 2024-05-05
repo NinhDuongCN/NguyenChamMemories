@@ -15,22 +15,51 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="NguyênChâm's Memories">
     <meta property="og:url" content="https://NguyenChamMemories.id.vn">
-    <meta property="og:description" content="2024-03-20">
+    <meta property="og:description" content="NguyênChâm's Memories">
+    <meta name="description" content="NguyênChâm's Memories">
 
 </head>
-<body>
-    <noscript>Cần bật javascript để trang hoạt động đầy đủ</noscript>
-    <div id="msg" onclick="div_Clicked()">Coming soon</div>
+<body >
+    <noscript data-nosnippet>Cần bật javascript để trang hoạt động đầy đủ</noscript>
+    <!--<div id="msg" onclick="div_Clicked()">Coming soon</div>-->
+    <div class="popup" id="notif" onclick="ClosePopup('notif')">
+        <p class="popup_title" id="poptitle"></p>
+        <p class="popup_msg" id="popmsg"></p>
+    </div>
+
+    <div class="container" id="divbgr" onclick="div_Clicked()"></div>
+    <div class="container" id="divMain">
+        <div class="controllerGroup" id="audioController">
+            <audio id="au" onended="PlayAudio()" onplay="SetBtnPause()" onpause="SetBtnPlay()" src="#" hidden aria-hidden="true"></audio>
+            <div class="ctrlBtn" id="btnComment"></div>
+            <div class="ctrlBtn" id="btnPlayPause"  onclick="BtnClicked()"></div>
+            <div class="ctrlBtn" id="btnNext" onclick="PlayAudio()"></div>
+            <p>Love you to the Moon and back</p>
+        </div>
+
+        <div class="appGroup" id="appGroup">
+            <div class="app" id="NCm"onclick="appClicked('NCm')"></div>
+            <div class="app" id="WDCD" onclick="appClicked('WDCD')"></div>
+            <div class="app" id="proposal" onclick="appClicked('proposal')"></div>
+            <div class="app" id="WDi"onclick="appClicked('WDi')"></div>
+            <div class="app" id="WD" onclick="appClicked('WD')"></div>
+            <div class="app" id="LanHuoLong" onclick="appClicked('LanHuoLong')"></div>
+            <div class="app" id="blank" onclick="div_Clicked()"></div>
+            <div class="app" id="blank" onclick="div_Clicked()"></div>
+            <div class="app" id="blank" onclick="div_Clicked()"></div>
+            <div class="app" id="blank" onclick="div_Clicked()"></div>
+        </div>
+    </div>
 
     <!--play audio-->
-    <img id="btnPlayPause" src="./images/btns/btn_play.svg" onclick="BtnClicked()" tag="pause" />
-    <audio id="au" hidden="true" onended="PlayAudio()" onplay="SetBtnPause()" onpause="SetBtnPlay()" src="#">
+    <!--<img id="btnPlayPause" src="./images/btns/btn_play.svg" onclick="BtnClicked()" tag="pause" />-->
+    
 
 
 </body>
 <script language="javascript">
+    setTimeout(Memo, 3000);
     CreateRandomLstNhac();
     PlayAudio();
-    
 </script>
 </html>
