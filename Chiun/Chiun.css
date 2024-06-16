@@ -52,7 +52,7 @@ noscript::after{
     position: relative;
     left: 50%;
     /*top: 50%;*/
-    transform: translate(-50%, 2%);
+    transform: translate(-50%, 5%);
 
     background: transparent;
     -webkit-backdrop-filter: blur(4px) brightness(0.95);
