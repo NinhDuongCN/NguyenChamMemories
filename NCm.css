@@ -22,6 +22,10 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+noscript::after{
+    content: "Cần bật javascript để trang hoạt động đầy đủ";
+}
 /* *{
     -webkit-transition: all ease 0.15s;
     -moz-transition: all ease 0.15s;

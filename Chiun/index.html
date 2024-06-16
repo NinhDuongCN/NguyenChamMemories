@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="../images/HuoLongFavicon.svg" />
+    <link type="text/css" rel="stylesheet" href="./Chiun.css" />
+    <script type="text/javascript" src="./Chiun.js"></script>
+
+    <title>HaChiun</title>
+
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://NguyenChamMemories.id.vn/Chiun/img/thumbnail.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HaChiun">
+    <meta property="og:url" content="https://NguyenChamMemories.id.vn/Chiun">
+    <meta property="og:description" content="HaChiun">
+    <meta name="description" content="HaChiun">
+</head>
+<body>
+    <noscript></noscript>
+    <div id="countBox">
+        <div class="timer" id="countdown" >
+            <div id="daysleft"></div>
+        </div>
+        <div class="timer" id="countup" hidden>
+            <div id="time">
+                <div class="timeItem" id="week"></div>
+                <div class="timeItem" id="day"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script language="javascript">
+    Count();
+    setInterval(CountboxDisplay, 5000);
+</script>
+</html>

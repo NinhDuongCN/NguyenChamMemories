@@ -39,10 +39,13 @@
             color:white;
             text-shadow: #000000 5px -4px 1em;
         }
+        noscript::after{
+            content: "Cần bật javascript để trang hoạt động đầy đủ";
+        }
     </style>
 </head>
 <body>
-    <noscript data-nosnippet>Cần bật javascript để trang hoạt động</noscript>
+    <noscript></noscript>
     <div id="msg" onclick="div_Clicked()">Coming soon</div>
 </body>
 <script language="javascript">
