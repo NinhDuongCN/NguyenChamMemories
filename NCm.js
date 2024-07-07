@@ -195,12 +195,16 @@ function ClosePopup(popupid){
 
 var frmCmt;
 var elFileName;
+var aufileName;
 function BtnCommentClicked(){
     frmCmt = document.querySelector("#cmtFrm");
     frmCmt.classList.add("active");
 
     elFileName = document.querySelector("#fileName");
-    elFileName.innerText = curAudio;
+    aufileName = elFileName.innerText = curAudio; 
+    //vì curAudio sẽ thay đổi khi đổi bài hát, 
+    //và elFileName.innerText thay đổi sau khi đã gửi cmt đi. 
+    //tuy nhiên cần có 1 biến lưu tên file audio thời điểm mở frmCmt
 }
 
 function BtnSendCmt(){
@@ -213,7 +217,7 @@ function BtnSendCmt(){
     btnSend.innerHTML = "...";
     btnSend.setAttribute('disabled','true');
 
-    var data = "n=" + curAudio + "&cm=" + encodeURIComponent(cmt);
+    var data = "n=" + aufileName + "&cm=" + encodeURIComponent(cmt);
 
     $.ajax({ //Sử dụng Ajax gửi data
         url: 'https://script.google.com/macros/s/AKfycbxXVHxQIRv5Vtj8WmZUKkZ1PoLJRjMBl_3qB5flLSEmelSufuBvY_CMLgP2SjLD3Q1z9A/exec',
