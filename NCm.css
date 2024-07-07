@@ -285,7 +285,7 @@ noscript::after{
 
 #cmtFrm.active{
     --w: 80vw;
-    width: clamp(100px, 80%, 300px);
+    width: clamp(100px, 80%, 600px);
     height: fit-content;
     opacity: 100%;
 
@@ -328,6 +328,7 @@ noscript::after{
     padding: 15px 4px 5px 6px;
     border: 1px solid grey;
     border-radius: 5px;
+
 }
 
 #cmtFrm.active>div>#label::before{
@@ -353,15 +354,6 @@ noscript::after{
 #cmtFrm.active>div>#cmtInp:focus{
     border-color: blue;
 }
-
-/* #cmtFrm.active>div>#cmtInp:focus+#label::before{
-    font-weight: bold;
-}
-
-#cmtFrm.active>div>#cmtInp:focus+#label{
-    top: -11px;
-    left: 1px;
-} */
 
 #cmtFrm.active>#btns{
     position: relative;
@@ -389,7 +381,7 @@ noscript::after{
     text-align: center;
     
     border: 1px solid gray;
-    border-radius: 1lh;
+    border-radius: 2lh;
 
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -408,12 +400,14 @@ noscript::after{
 }
 
 #cmtFrm.active>#btns>#btnSubmit::before{
+    font-family: 'Lora', sans-serif;
     content: "Gửi";
     line-height: 2lh;
     font-weight: bold;
 }
 
 #cmtFrm.active>#btns>#btnClose::before{
+    font-family: 'Lora', sans-serif;
     content: "Đóng";
     line-height: 2lh;
     font-weight: bold;
@@ -579,5 +573,8 @@ noscript::after{
         -moz-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
+    }
+    #cmtFrm.active>div>#cmtInp{
+        overflow:hidden;
     }
 }
