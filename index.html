@@ -6,6 +6,8 @@
     <link rel="shortcut icon" type="image/icon" href="./images/MemoriesFavicon.svg" />
     <link type="text/css" rel="stylesheet" href="./NCm.css" />
     <script type="text/javascript" src="./NCm.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>NguyênChâm's Memories</title>
 
@@ -31,7 +33,7 @@
     <div class="container" id="divMain">
         <div class="controllerGroup" id="audioController">
             <audio id="au" onended="PlayAudio()" onplay="SetBtnPause()" onpause="SetBtnPlay()" src="#" hidden aria-hidden="true"></audio>
-            <div class="ctrlBtn" id="btnComment"></div>
+            <div class="ctrlBtn" id="btnComment" onclick="BtnCommentClicked()"></div>
             <div class="ctrlBtn" id="btnPlayPause"  onclick="BtnClicked()"></div>
             <div class="ctrlBtn" id="btnNext" onclick="PlayAudio()"></div>
             <p>Love you to the Moon and back</p>
@@ -51,6 +53,19 @@
         </div>
     </div>
 
+    <!--2024.07.07 thêm comment-->
+    <form class="frm cmt " id="cmtFrm" method="post">
+        <p class="frmItem cmtLable" id="fileName"></p>
+        <div class="frmItem" id="cmtInpField">
+            <textarea class="frmItem cmtInput" id="cmtInp" name="cm"></textarea>
+            <label class="frmItem lbl" id="label"></label>
+        </div>
+        <div class="frmItem" id="btns">
+            <button type="button" id="btnClose"></button>
+            <button type="button" class="frmItem submit" id="btnSubmit" ></button>
+        </div>
+    </form>
+
     <!--play audio-->
     <!--<img id="btnPlayPause" src="./images/btns/btn_play.svg" onclick="BtnClicked()" tag="pause" />-->
     
@@ -58,8 +73,8 @@
 
 </body>
 <script language="javascript">
-    setTimeout(Memo, 3000);
-    CreateRandomLstNhac();
-    PlayAudio();
+    // setTimeout(Memo, 3000);
+    // CreateRandomLstNhac();
+    // PlayAudio();
 </script>
 </html>

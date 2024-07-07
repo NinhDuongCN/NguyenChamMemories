@@ -248,6 +248,176 @@ noscript::after{
 
 }
 
+#cmtFrm{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    background-color: #ffffe0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 0 10px 10px 15px;
+                
+    
+    padding: 0 10px 10px 15px;
+    display: block;
+    opacity: 0%;
+    z-index: 209;
+
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+/* #cmtFrm>.frmItem{
+    
+} */
+
+#cmtFrm.active{
+    --w: 80vw;
+    width: clamp(100px, 80%, 300px);
+    height: fit-content;
+    opacity: 100%;
+
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+#cmtFrm.active>.frmItem{
+    visibility: visible;
+    font-family: 'Lora', sans-serif;
+    font-size: 14pt;
+    line-height: 1lh;
+    margin-bottom: 1lh;
+}
+
+#cmtFrm.active>#fileName::before{
+    content: "FileName: ";
+    font-size: 12pt;
+    font-weight: bold;
+    margin-left: 1px;
+}
+
+#cmtFrm.active>#cmtInpField{
+    position: relative;    
+}
+
+#cmtFrm.active>div>#cmtInp{
+    font-family: 'Lora', sans-serif;
+    font-size: 14pt;
+    line-height: normal;
+
+    width: 95%;
+    height: 6lh;
+    background-color: #ffffe0;
+    outline: none;
+    text-align: justify;
+    resize: none;
+    padding: 15px 4px 5px 6px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#cmtFrm.active>div>#label::before{
+    content: "Ghi chú";
+    font-size: 12pt;
+    /*font-weight: normal;*/
+    font-weight: bold;
+    color: black;
+}
+
+#cmtFrm.active>div>#label{
+    position: absolute;
+    /* top: 5px;
+    left: 10px; */
+    top: -11px;
+    left: 1px;
+    
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffe0;
+}
+
+#cmtFrm.active>div>#cmtInp:focus{
+    border-color: blue;
+}
+
+/* #cmtFrm.active>div>#cmtInp:focus+#label::before{
+    font-weight: bold;
+}
+
+#cmtFrm.active>div>#cmtInp:focus+#label{
+    top: -11px;
+    left: 1px;
+} */
+
+#cmtFrm.active>#btns{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    left: 50%;
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    transform: translateX(-50%);
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#cmtFrm.active>#btns>button{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    width: 45%;
+    text-align: center;
+    
+    border: 1px solid gray;
+    border-radius: 1lh;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#cmtFrm.active>#btns>button:hover{
+    background-color: #ffffff;
+    border-color: #00f;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#cmtFrm.active>#btns>#btnSubmit::before{
+    content: "Gửi";
+    line-height: 2lh;
+    font-weight: bold;
+}
+
+#cmtFrm.active>#btns>#btnClose::before{
+    content: "Đóng";
+    line-height: 2lh;
+    font-weight: bold;
+}
 
 @media screen and (orientation: portrait) {
     .popup{

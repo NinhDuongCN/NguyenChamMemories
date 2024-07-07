@@ -1,7 +1,23 @@
 /*
  * create: 2024-02-03
  * update: 2024-02-10: bổ sung bài số 119.
+ * update: 2024-07-07: thêm chức năng comment.
  */
+
+var curAudio;
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    setTimeout(Memo, 3000);
+    CreateRandomLstNhac();
+    PlayAudio();
+
+    //add event 
+    document.querySelector("#btnComment").addEventListener("click", BtnCommentClicked);
+    document.querySelector("#btnSubmit").addEventListener("click", BtnSendCmt);
+    document.querySelector("#btnClose").addEventListener("click", BtnCloseDlg)
+});
+
 
 var changeaudio=false;
 
@@ -46,7 +62,8 @@ function CreateRandomLstNhac()
 function PlayAudio()
 {
     var aud = document.getElementById("au");
-    aud.setAttribute("src", "./audios/" + lstNhac.shift());
+    curAudio = lstNhac.shift();
+    aud.setAttribute("src", "./audios/" + curAudio);
     aud.play();
     if(lstNhac.length === 0)
     {
@@ -170,14 +187,60 @@ function Memo(){
 
 function ClosePopup(popupid){
     document.getElementById(popupid).classList.remove("active");
-    // if(!isPlaying){
-    //     try{
-    //         aud.play();
-    //         aud.pause();
-    //     }
-    //     catch{
-    //         PlayAudio();
-    //     }
-    // }
+
 }
 //#endregion memories
+
+//#region CommentForAudio
+
+var frmCmt;
+var elFileName;
+function BtnCommentClicked(){
+    frmCmt = document.querySelector("#cmtFrm");
+    frmCmt.classList.add("active");
+
+    elFileName = document.querySelector("#fileName");
+    elFileName.innerText = curAudio;
+}
+
+function BtnSendCmt(){
+    var cmt = document.querySelector("#cmtInp").value;
+    if(cmt?.trim() == ''){
+        alert("Nội dung ghi chú không được để trống");
+        return;
+    }
+    var btnSend= document.querySelector("#btnSubmit");
+    btnSend.innerHTML = "...";
+    btnSend.setAttribute('disabled','true');
+
+    var data = "n=" + curAudio + "&cm=" + encodeURIComponent(cmt);
+
+    $.ajax({ //Sử dụng Ajax gửi data
+        url: 'https://script.google.com/macros/s/AKfycbxXVHxQIRv5Vtj8WmZUKkZ1PoLJRjMBl_3qB5flLSEmelSufuBvY_CMLgP2SjLD3Q1z9A/exec',
+        method: "GET",
+        dataType: 'json',
+        data: data,
+        success: function(responseData, textStatus, jqXHR) {
+            if(textStatus!='success'){
+                alert('Thông tin chưa được gửi đi. Lỗi:' + responseData.msg);
+            }
+            else{
+                alert('Đã gửi thành công');
+                elFileName.innerText = curAudio + " - " + responseData.msg;
+            }
+            btnSend.innerHTML = "";
+            btnSend.removeAttribute('disabled');
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert('Không gửi được thông tin. Hãy thử đăng nhập tài khoản Google trước');
+            btnSend.innerHTML = "Gửi";
+            btnSend.removeAttribute('disabled');
+            console.log(errorThrown);
+        }
+    });
+}
+
+function BtnCloseDlg(){
+    frmCmt.classList.remove("active");
+}
+//#endregion Comment for Audio
