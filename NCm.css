@@ -1,6 +1,6 @@
 /*
  * create: 2024-02-03
- * update:
+ * update: 2024-07-07 update comment for audio
  */
 
 @charset "UFT-8";
@@ -26,37 +26,6 @@ body{
 noscript::after{
     content: "Cần bật javascript để trang hoạt động đầy đủ";
 }
-/* *{
-    -webkit-transition: all ease 0.15s;
-    -moz-transition: all ease 0.15s;
-    -o-transition: all ease 0.15s;
-    transition: all ease 0.15s;
-} */
-
-
-
-/* #msg{
-    width: 100%;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-family: 'Mea Culpa', cursive;
-    font-size: 9vh;
-    color:white;
-    text-shadow: #000000 5px -4px 1em;
-} */
-
-/* #btnPlayPause{
-    height: 8vh;
-    width: auto;
-    right: 20px;
-    bottom: 20px;
-    position: fixed;
-    z-index: 999;
-    opacity: 50%;
-    border-radius: 8vh;
-} */
 
 .container{
     width: 100%;
@@ -575,6 +544,6 @@ noscript::after{
         transform: translateX(-50%);
     }
     #cmtFrm.active>div>#cmtInp{
-        overflow:hidden;
+        overflow: hidden;
     }
 }

@@ -175,7 +175,6 @@ function Memo(){
     if(msg===""){
         return;
     }
-    //alert("Sự kiện sắp đến: " + msg);
     document.getElementById("popmsg").innerText = msg;
     document.getElementById("notif").classList.add("active");
 
