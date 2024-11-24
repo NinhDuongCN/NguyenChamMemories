@@ -78,7 +78,7 @@ noscript::after{
 }
 
 #daysleft::before{
-    content: " ";/*"Còn ";*/ //2024.11.24 sửa hiển thị ngày sinh Chiun
+    content: " ";/*"Còn ";*/ /*2024.11.24 sửa hiển thị ngày sinh Chiun*/
     
     font-family: 'Lobster', cursive;
     font-weight: normal;
@@ -116,7 +116,7 @@ noscript::after{
 }
 
 #week::after{
-    content: " tháng"/*" tuần";*/ //sửa hiển thị ngày sinh Chiun
+    content: " tháng"/*" tuần";*/ /*sửa hiển thị ngày sinh Chiun*/
     
     font-family: 'Lobster', cursive;
     font-weight: normal;
