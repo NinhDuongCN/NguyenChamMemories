@@ -55,7 +55,7 @@ function IsLeapYear(year){
 }
 
 let dom=[31,28,31,30,31,30,31,31,30,31,30,31];
-let dateob = new Date(2024,10,24);
+let dateob = new Date(2024,10,24,0,0,0);
 
 
 function Count2(){
@@ -63,11 +63,11 @@ function Count2(){
     var dot = td.getDate();
     var mot = td.getMonth();
     var yot = td.getFullYear();
-    
+alert("ok");
     var dob = dateob.getDate();
     var mob = dateob.getMonth();
     var yob = dateob.getFullYear();
-alert("ok");
+
     var Days = Math.floor(((new Date(yot, mot, dot,0,0,0)).getTime() - (new Date(yob, mob, dob,0,0,0)).getTime())/86400000, 0);
     document.getElementById('daysleft').innerText = ZeroPadding(Days);
 
