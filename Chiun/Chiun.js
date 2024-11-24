@@ -60,10 +60,11 @@ let dateob = new Date(2024,10,24,0,0,0);
 
 function Count2(){
     let td = new Date();
+alert("ok");
     var dot = td.getDate();
     var mot = td.getMonth();
     var yot = td.getFullYear();
-alert("ok");
+
     var dob = dateob.getDate();
     var mob = dateob.getMonth();
     var yob = dateob.getFullYear();
