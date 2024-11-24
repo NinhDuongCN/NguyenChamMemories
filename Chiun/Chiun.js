@@ -68,7 +68,7 @@ function Count2(){
     var mob = dateob.getMonth();
     var yob = dateob.getFullYear();
 
-    var Days = ((new Date(yot, mot, dot)) - (new Date(yob, mob, dob))).getTime()/86400000;
+    var Days = ((new Date(yot, mot, dot)).getTime() - (new Date(yob, mob, dob)).getTime())/86400000;
     document.getElementById('daysleft').innerText = ZeroPadding(Days);
 
     var Months = (yot - yob) * 12 + (mot - mob);
