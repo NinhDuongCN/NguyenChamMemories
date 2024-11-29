@@ -1,3 +1,7 @@
+/*
+    updated on 23/11/2024
+*/
+
 var flag = false;
 const dayofmonth = [30, 31, 31, 30, 31]; 
 const dayBorn = new Date(2024, 10, 28);
@@ -43,4 +47,16 @@ function Count(){
     let wl = Math.floor(dl/7);
     document.getElementById('week').innerText = ZeroPadding(wl);
     document.getElementById('day').innerText = ZeroPadding(dl-wl*7);
+}
+
+function Count2(dateob){
+    let td = new Date();
+    var daysleft, months, days;
+    let dob = dateob.getDate();
+    let mob = dateob.getMonth();
+    let yob = dateob.getYear();
+    let yot = td.getYear();
+    let mot = td.getMonth();
+    let dot = td.getDate();
+
 }
