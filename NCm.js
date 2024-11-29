@@ -2,6 +2,7 @@
  * create: 2024-02-03
  * update: 2024-02-10: bổ sung bài số 119.
  * update: 2024-07-07: thêm chức năng comment.
+ * update: 2024-11-29: thêm memory ngày sinh Chiun.
  */
 
 var curAudio;
@@ -123,7 +124,13 @@ function appClicked(app){
 //#endregion app_clicked
 
 //#region memories
-let lstDate = [[2, 20], [3, 20], [5, 6], [5, 11], [8, 4], [8, 7], [8, 12], [9, 2], [12, 6]]; //thay đổi length ở dưới
+/*
+    updated on 2024.11.29: thêm ngày 24/11
+*/
+let lstDate = [[2, 20], [3, 20], [5, 6], [5, 11], [8, 4], [8, 7], [8, 12], [9, 2], [11, 24] [12, 6]]; //thay đổi length ở dưới.
+/*
+    updated on 2024.11.29: cập nhật ngày sinh Chiun
+*/
 function Memo(){
     var day = new Date();
     var month = day.getMonth() + 1;
@@ -131,7 +138,7 @@ function Memo(){
     var msg = ""; //Sự kiện sắp đến:
     var index = 0;
     if(month===12){
-        while(index < 9 /*lstDate.length*/){
+        while(index < 10 /*lstDate.length*/){
             if(lstDate[index][0] === 1){
                 msg += (lstDate[index][1]<10?"0":"") + lstDate[index][1] + "/01; ";
                 index++;
@@ -140,7 +147,7 @@ function Memo(){
                 break;
             }
         }
-        index = 8; /*lstDate.length - 1*/
+        index = 9; /*lstDate.length - 1*/
         while(index>-1){
             if(lstDate[index][0] === 12)
             {
@@ -156,7 +163,7 @@ function Memo(){
     }
     else{
         index = 0;
-        while(index < 9 /*lstDate.length*/){
+        while(index < 10 /*lstDate.length*/){
             if(lstDate[index][0] === month){
                 if(lstDate[index][1] > day){
                     msg += (lstDate[index][1]<10?"0":"") + lstDate[index][1] + "/" + (month<3?"0":"") + month+"; ";

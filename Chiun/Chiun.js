@@ -1,5 +1,6 @@
 /*
-    updated on 23/11/2024
+    updated on 24/11/2024.
+    Chiun 10:24 24/11/2024 @20.8596373,106.6834862,21z
 */
 
 var flag = false;
@@ -7,7 +8,7 @@ const dayofmonth = [30, 31, 31, 30, 31];
 const dayBorn = new Date(2024, 10, 28);
 
 function CountboxDisplay()
-{
+{    
     Count2();
     if(flag){
         document.getElementById('countdown').removeAttribute("hidden");
@@ -20,7 +21,7 @@ function CountboxDisplay()
     flag = !flag
 }
 
-/*
+/* updated on 2024.11.24. trước sinh
 function DayLeft(){
     
     let td = new Date();
@@ -37,10 +38,6 @@ function DayLeft(){
     return re - tDay;
 }
 
-function ZeroPadding(num){
-    return (num<10?'0':'')+num;
-}
-
 function Count(){
     let dl = DayLeft();
     document.getElementById('daysleft').innerText = ZeroPadding(dl);
@@ -48,21 +45,11 @@ function Count(){
     let wl = Math.floor(dl/7);
     document.getElementById('week').innerText = ZeroPadding(wl);
     document.getElementById('day').innerText = ZeroPadding(dl-wl*7);
-<<<<<<< HEAD
-}
-
-function Count2(dateob){
-    let td = new Date();
-    var daysleft, months, days;
-    let dob = dateob.getDate();
-    let mob = dateob.getMonth();
-    let yob = dateob.getYear();
-    let yot = td.getYear();
-    let mot = td.getMonth();
-    let dot = td.getDate();
-
-=======
 }*/
+
+function ZeroPadding(num){
+    return (num<10?'0':'')+num;
+}
 
 function IsLeapYear(year){
     if(year%4===0){
@@ -104,5 +91,4 @@ function Count2(){
 
     document.getElementById('week').innerText = ZeroPadding(Months);
     document.getElementById('day').innerText = ZeroPadding(Days);
->>>>>>> f8eec2b2a042c9b0436be9020f625cf4de3730f0
 }
