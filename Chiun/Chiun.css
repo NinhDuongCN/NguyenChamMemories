@@ -133,3 +133,51 @@ noscript::after{
 
     text-shadow: none;
 }
+
+/* popup sotiem */
+#secPopup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+.popup {
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.popup-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.popup-msg {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.popup.notif{
+    position: relative;
+    top: -25vh;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}

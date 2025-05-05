@@ -1,0 +1,373 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+#header{
+    top:0;
+    position: sticky;
+}
+
+/* Popup section */
+#notif-title::after{
+    content: "Chú ý lịch tiêm";
+    display: block;
+}
+#updateDlg-title::before{
+    content: "Cập nhật mũi tiêm";
+    display: block;
+}
+/* General styles for the popup section */
+#secPopup {
+    position: fixed;
+    /* top: 20px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+/* Popup container styles */
+.popup {
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Popup title styles */
+.popup-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Popup message styles */
+.popup-msg {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.popup.notif{
+    position: relative;
+    top: -25vh;
+}
+
+/* Select dropdown styles */
+.updateDlg select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit; /* Ensures font consistency */
+}
+
+/* Update detail container styles */
+.update-detail {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update-detail a {
+    font-weight: normal;
+    /* color: #333333; */
+}
+
+.update-item {
+    width: calc(60%);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit; /* Ensures font consistency */
+    font-size: 14px; /* Applies consistent font size */
+}
+
+/* Button styles */
+.update-button{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.update-button button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    font-family: inherit; /* Ensures font consistency */
+    width: calc(40%);
+}
+
+.update-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Active and inactive state styles */
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+
+/* Banner Section */
+#secBanner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0078D7;
+    color: white;
+    padding: 25px 20px;
+    font-size: 2em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#secBanner a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Menu Bar */
+#menubar {
+    background-color: #005A9E;
+    padding: 10px 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#menubar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: flex-start;
+    gap: 20px; */
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+#menubar li {
+    /* display: flex; */
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+#menubar li:hover {
+    color: #00C1FF;
+}
+#searchInput {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: calc(100% - 20px);
+}
+#menubar select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* Cards Section */
+#secList {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    height: fit-content;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+.card summary {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    color: #005A9E;
+    cursor: pointer;
+}
+
+.card summary a:last-child {
+    text-align: right;
+    font-size: 14px;
+}
+
+.card-detail-group {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eaeaea;
+}
+
+.group-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.grpttl-name {
+    font-weight: bold;
+    color: #444;
+}
+
+.grpttl-status {
+    font-size: 14px;
+    color: #007BFF;
+}
+
+.card-detail {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.card-button{
+    display: flex;
+    justify-content: center;
+}
+.card-button button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+.card-button button:hover {
+    background-color: #005A9E;
+}
+
+.card.additembtn .card-detail input{
+    border-bottom: #005A9E solid 1px;
+    min-width: 10px;
+    width: fit-content;
+    outline: none;
+    color: #005A9E;
+    text-align: right;
+    border: none;
+    background-color: inherit;
+    font: inherit
+}
+
+#adddukien{
+    direction: rtl;
+    text-align: right;
+}
+
+/* section loader */
+.secloader{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Mờ 90% */
+    position: fixed;
+    z-index: 9999;
+}
+.secloader.inactive{
+    display: none;
+}
+
+#loader{
+    border: 12px solid #f3f3f3; /* Màu viền ngoài */
+    border-top: 12px solid #3498db; /* Màu viền trên */
+    border-radius: 50%; /* Bo tròn */
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite; /* Hiệu ứng xoay */
+}
+
+/* Tạo hiệu ứng xoay */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader-title{
+    /* display: block; */
+    font: inherit;
+    color: white;
+}
+
+/* section footer */
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078D7;
+    color: white;
+    margin-top: 2em;
+    padding: 10px; 
+    font-size: 0.8em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    bottom:0;
+    position: sticky; 
+}
+
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+
+#footer .footerbtn{
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* margin: 10px; */
+}
+
+#footer .footerbtn#backtoChiun{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('https://www.NguyenChamMemories.id.vn/images/HuoLongFavicon.svg');
+}

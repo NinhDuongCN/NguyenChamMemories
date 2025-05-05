@@ -6,6 +6,9 @@
     <link rel="shortcut icon" type="image/icon" href="../images/HuoLongFavicon.svg" />
     <link type="text/css" rel="stylesheet" href="./Chiun.css" />
     <script type="text/javascript" src="./Chiun.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../SoTiem/lichtiemnotif.js"></script>
 
     <title>HaChiun</title>
 
@@ -31,9 +34,16 @@
             </div>
         </div>
     </div>
+    <section id="secPopup">
+        <div class="popup notif inactive" id="notif-soTiem" onclick="OpenSoTiem()">
+            <p class="popup-title" id="notif-title"></p>
+            <p class="popup-msg" id="notif-msg"></p>
+        </div>
+    </section>
 </body>
 <script language="javascript">
     Count2(); //updated on 2024.11.24: Chiun
     setInterval(CountboxDisplay, 5000);
+    RequestLichtiemNotif()
 </script>
 </html>

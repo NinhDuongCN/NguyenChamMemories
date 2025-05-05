@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./sotiem.css" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Sổ tiêm chủng</title>
+    <link rel="shortcut icon" type="image/icon" href="../images/SoTiemFavicon.svg" />
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://NguyenChamMemories.id.vn/images/thumbs/SoTiemThumbnail.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sổ tiêm chủngchủng">
+    <meta property="og:url" content="https://NguyenChamMemories.id.vn/SoTiem">
+    <meta property="og:description" content="Sổ theo dõi tiêm chủng của Ha Chiun">
+    <meta name="description" content="Sổ tiêm chủng điện tử của Ha Chiun">
+</head>
+<body>
+    
+    <section id="secPopup">
+        <div class="popup notif inactive" id="notif-popup" onclick="CloseDlg('notif-popup')">
+            <p class="popup-title" id="notif-title"></p>
+            <p class="popup-msg" id="notif-msg"></p>
+        </div>
+        <div class="popup updateDlg inactive" id="updateDlg"></div>
+    </section>
+    <section id="header">
+        <section id="secBanner">
+            <a>Sổ tiêm chủng</a>
+            <!-- <a>Ha Chiun</a> -->
+        </section>
+        <section id="menubar">
+            <ul>
+                <li>
+                    <select onchange="select_listview_changed()" id="viewmode">
+                        <option value="all" selected>Danh sách tổng</option>
+                        <option value="complete">Đã hoàn thành</option>
+                        <option value="incomplete">Chưa hoàn thành</option>
+                        <option value="done">Đã tiêm</option>
+                        <option value="undone">Chưa tiêm</option>
+                        <option value="coming">Gần đến hạn</option>
+                        <option value="due">Đến hạn</option>
+                        <option value="over">Quá hạn</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm">
+                </li>    
+            </ul>
+        </section>
+    </section>
+    <section id="secList">
+        
+    </section>
+    <section class="secloader inactive" id="secloader">
+        <div id="loader"></div>
+        <p id="loader-title">Đang tải</p>
+    </section>
+    <section id="footer">
+        <a></a>
+        <a class="copyright" href="https://www.NguyenChamMemories.id.vn">Powered by NguyenChamMemories</a>
+        <a class="footerbtn" id="backtoChiun" href="https://www.NguyenChamMemories.id.vn/Chiun"></a>
+    </section>
+</body>
+<script type="text/javascript" src="./sotiem.js"></script>
+</html>

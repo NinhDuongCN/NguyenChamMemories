@@ -125,6 +125,9 @@ noscript::after{
 .app#LanHuoLong{
     background-image: url('./images/HuoLongFavicon.svg');
 }
+.app#SoTiem{
+    background-image: url('./images/SoTiemFavicon.svg');
+}
 
 #divMain{
     width: 100%;
@@ -174,6 +177,9 @@ noscript::after{
     }
     .app#LanHuoLong{
         grid-area: 1 / 5 / 2 / 6;
+    }
+    .app#SoTiem{
+        grid-area: 1 / 4 / 2 / 5;
     }
 }
 
