@@ -32,7 +32,7 @@ function ShowNotif(coming){
 
     //////sửa cách hiển thị msg 
     document.querySelector("#notif-msg").innerHTML = msg;
-    document.getElementById('notif-popup').classList.replace("inactive", "active");
+    document.getElementById('notif-soTiem').classList.replace("inactive", "active");
 }
 
 function OpenSoTiem(){

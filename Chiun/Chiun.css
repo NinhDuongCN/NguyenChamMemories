@@ -139,7 +139,7 @@ noscript::after{
     position: fixed;
     top: 20px;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     width: 350px;
     z-index: 1000;
     font-family: Arial, sans-serif;
@@ -171,7 +171,6 @@ noscript::after{
 
 .popup.notif{
     position: relative;
-    top: -25vh;
 }
 
 .active {
