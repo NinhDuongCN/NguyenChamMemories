@@ -173,6 +173,11 @@ noscript::after{
     position: relative;
 }
 
+#notif-title::after{
+    content: "Chú ý lịch tiêm";
+    display: block;
+}
+
 .active {
     display: block;
 }

@@ -35,6 +35,10 @@ function ShowNotif(coming){
     document.getElementById('notif-soTiem').classList.replace("inactive", "active");
 }
 
+function CloseNotif(){
+    document.getElementById('notif-soTiem').classList.replace("active", "inactive");
+}
+
 function OpenSoTiem(){
     window.location = "https://www.NguyenChamMemories.id.vn/SoTiem";
 }
