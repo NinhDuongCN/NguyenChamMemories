@@ -343,7 +343,7 @@ function ShowCards(items){
                         <details>
                             <summary>
                                 <a class="card-name">${item.loai} ${item.mui==undefined?"":("(liều "+item.mui+")")}</a>
-                                <a>Đã tiêm</a>
+                                <a>${item.trangthai}</a>
                             </summary>
                             <div class="card-detail">
                                 <a>Ngày tiêm</a>
@@ -396,7 +396,7 @@ function ShowCards2(items){
                 card += `<div class="card-detail-group">
                             <div class="group-title">
                                 <a class="grpttl-name">${(!lan.mui)?"":"Liều "+lan.mui}</a>
-                                <a class="grpttl-status">Đã tiêm</a>
+                                <a class="grpttl-status">${lan.trangthai}</a>
                             </div>
                             <div class="card-detail">
                                 <a>Ngày tiêm</a>
