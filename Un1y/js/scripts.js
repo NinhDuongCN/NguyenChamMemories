@@ -115,6 +115,9 @@ const tlM = document.querySelector(".timecard#minutes");
 const tlS = document.querySelector(".timecard#secondes");
 function ShowTimeLeft() {
     let secs = Math.floor((BIRTHDAY.getTime() - (new Date()).getTime()) / 1000);
+    if(secs < 0){
+        secs = 0;
+    }
     tlD.textContent = zeroPadding(Math.floor(secs / 86400));
     secs = secs % 86400;
     tlH.textContent = zeroPadding(Math.floor(secs / 3600));
