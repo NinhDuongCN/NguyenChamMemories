@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" stroke="currentColor" fill="none">
+  <path d="M47,1v25H1V1h46M47,0H1C.45,0,0,.45,0,1v25c0,.55.45,1,1,1h46c.55,0,1-.45,1-1V1c0-.55-.45-1-1-1h0Z"/>
+  <g>
+    <path d="M13,31.5c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h22c.28,0,.5.22.5.5s-.22.5-.5.5H13Z" style="fill: #fff; "/>
+    <path d="M35,30H13c-.55,0-1,.45-1,1s.45,1,1,1h22c.55,0,1-.45,1-1s-.45-1-1-1h0Z"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="3.59" y="1.74" width="5.18" height="6.83" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="5.51" y="11.11" width="6.83" height="5.18" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="24.71" y="11.98" width="4.01" height="3.04" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="21.12" y="20.14" width="2.42" height="2.42" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="39.7" y="20.09" width="4.6" height="2.54" transform="translate(-1.64 39.11) rotate(-49.08)" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="37.35" y="12.71" width="3.02" height="4.28" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="36.53" y="3.1" width="4.03" height="2.49" transform="translate(13.36 33.84) rotate(-55.94)" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="30.86" y="7.77" width="4.6" height="3.55" transform="translate(-1.26 7.16) rotate(-12.09)" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="29.05" y="17.35" width="3.41" height="4.6" transform="translate(.27 39.72) rotate(-65.94)" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="13.33" y="5.43" width="5.18" height="5.18" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="21.41" y="1.98" width="5.18" height="3.45" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="2.05" y="19.27" width="5.18" height="3.11" style="fill: aqua;"/>
+  </g>
+  <g style="opacity: .11;">
+    <rect x="13.72" y="18.45" width="4.05" height="5.82" style="fill: aqua;"/>
+  </g>
+  <path d="M20,9.46l7,4.04-7,4.04v-8.08M20,8.46c-.52,0-1,.42-1,1v8.08c0,.58.48,1,1,1,.17,0,.34-.04.5-.14l7-4.04c.67-.38.67-1.35,0-1.73l-7-4.04c-.16-.09-.33-.14-.5-.14h0Z"/>
+</svg>

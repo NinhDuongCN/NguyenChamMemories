@@ -1,0 +1,736 @@
+/* 1. Fade Out */
+.fadeOut {
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* 2. Fade Out Left */
+.fadeOutLeft {
+  animation-name: fadeOutLeft;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* 3. Fade Out Right */
+.fadeOutRight {
+  animation-name: fadeOutRight;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* 4. Fade Out Up */
+.fadeOutUp {
+  animation-name: fadeOutUp;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* 5. Fade Out Down */
+.fadeOutDown {
+  animation-name: fadeOutDown;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+/* 6. Zoom Out */
+.zoomOut {
+  animation-name: zoomOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* 7. Zoom Out Left */
+.zoomOutLeft {
+  animation-name: zoomOutLeft;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOutLeft {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.3) translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* 8. Zoom Out Right */
+.zoomOutRight {
+  animation-name: zoomOutRight;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOutRight {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.3) translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* 9. Zoom Out Up */
+.zoomOutUp {
+  animation-name: zoomOutUp;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOutUp {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.3) translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* 10. Zoom Out Down */
+.zoomOutDown {
+  animation-name: zoomOutDown;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOutDown {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.3) translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* 11. Slide Out Left */
+.slideOutLeft {
+  animation-name: slideOutLeft;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* 12. Slide Out Right */
+.slideOutRight {
+  animation-name: slideOutRight;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* 13. Slide Out Up */
+.slideOutUp {
+  animation-name: slideOutUp;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* 14. Slide Out Down */
+.slideOutDown {
+  animation-name: slideOutDown;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* 15. Rotate Out */
+.rotateOut {
+  animation-name: rotateOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateOut {
+  from {
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+/* 16. Rotate Out Left */
+.rotateOutLeft {
+  animation-name: rotateOutLeft;
+  animation-fill-mode: forwards;
+  transform-origin: left center;
+}
+
+@keyframes rotateOutLeft {
+  from {
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+/* 17. Rotate Out Right */
+.rotateOutRight {
+  animation-name: rotateOutRight;
+  animation-fill-mode: forwards;
+  transform-origin: right center;
+}
+
+@keyframes rotateOutRight {
+  from {
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+/* 18. Rotate Out Up */
+.rotateOutUp {
+  animation-name: rotateOutUp;
+  animation-fill-mode: forwards;
+  transform-origin: top center;
+}
+
+@keyframes rotateOutUp {
+  from {
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+/* 19. Rotate Out Down */
+.rotateOutDown {
+  animation-name: rotateOutDown;
+  animation-fill-mode: forwards;
+  transform-origin: bottom center;
+}
+
+@keyframes rotateOutDown {
+  from {
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+/* 20. Flip Out X */
+.flipOutX {
+  animation-name: flipOutX;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipOutX {
+  from {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+/* 21. Flip Out Y */
+.flipOutY {
+  animation-name: flipOutY;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipOutY {
+  from {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+/* 22. Bounce Out */
+.bounceOut {
+  animation-name: bounceOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounceOut {
+  20% {
+    transform: scale(0.9);
+  }
+
+  50%,
+  55% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* 23. Bounce Out Up */
+.bounceOutUp {
+  animation-name: bounceOutUp;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounceOutUp {
+  20% {
+    transform: translateY(-10px);
+  }
+
+  40%,
+  45% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-2000px);
+    opacity: 0;
+  }
+}
+
+/* 24. Bounce Out Down */
+.bounceOutDown {
+  animation-name: bounceOutDown;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounceOutDown {
+  20% {
+    transform: translateY(10px);
+  }
+
+  40%,
+  45% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(2000px);
+    opacity: 0;
+  }
+}
+
+/* 25. Light Speed Out */
+.lightSpeedOut {
+  animation-name: lightSpeedOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lightSpeedOut {
+  from {
+    transform: translateX(0) skewX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+/* 26. Roll Out */
+.rollOut {
+  animation-name: rollOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rollOut {
+  from {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%) rotate(120deg);
+    opacity: 0;
+  }
+}
+
+/* 27. Swing Out */
+.swingOut {
+  animation-name: swingOut;
+  animation-fill-mode: forwards;
+  transform-origin: top center;
+}
+
+@keyframes swingOut {
+  20% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(5deg);
+  }
+
+  80% {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: rotate(100deg);
+    opacity: 0;
+  }
+}
+
+/* 28. Tada Out */
+.tadaOut {
+  animation-name: tadaOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tadaOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  to {
+    transform: scale(0.1) rotate(0);
+    opacity: 0;
+  }
+}
+
+/* 29. RubberBand Out */
+.rubberBandOut {
+  animation-name: rubberBandOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rubberBandOut {
+  from {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+  }
+}
+
+/* 30. Swirl Out */
+.swirlOut {
+  animation-name: swirlOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes swirlOut {
+  from {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  to {
+    transform: rotate(720deg) scale(0);
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+
+/* 31. Back Out Down */
+.backOutDown {
+  animation-name: backOutDown;
+  animation-fill-mode: forwards;
+}
+
+@keyframes backOutDown {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(700px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+/* 32. Back Out Left */
+.backOutLeft {
+  animation-name: backOutLeft;
+  animation-fill-mode: forwards;
+}
+
+@keyframes backOutLeft {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateX(-2000px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+/* 33. Back Out Right */
+.backOutRight {
+  animation-name: backOutRight;
+  animation-fill-mode: forwards;
+}
+
+@keyframes backOutRight {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateX(2000px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+/* 34. Back Out Up */
+.backOutUp {
+  animation-name: backOutUp;
+  animation-fill-mode: forwards;
+}
+
+@keyframes backOutUp {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-700px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+/* 35. lightSpeed Out Left */
+.lightSpeedOutLeft {
+  animation-name: lightSpeedOutLeft;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes lightSpeedOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+/* 35. lightSpeed Out Right */
+.lightSpeedOutRight {
+  animation-name: lightSpeedOutRight;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes lightSpeedOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}

@@ -1,6 +1,7 @@
 /*
  * create: 2024-02-03
  * update: 2024-07-07 update comment for audio
+ * update: 2025.11.13 update for Un1y
  */
 
 @charset "UFT-8";
@@ -128,6 +129,9 @@ noscript::after{
 .app#SoTiem{
     background-image: url('./images/SoTiemFavicon.svg');
 }
+.app#Un1y{
+    background-image: url('./images/Un1yFavicon.svg');
+}
 
 #divMain{
     width: 100%;
@@ -180,6 +184,9 @@ noscript::after{
     }
     .app#SoTiem{
         grid-area: 1 / 4 / 2 / 5;
+    }
+    .app#Un1y{
+        grid-area: 1 / 3 / 2 / 4;
     }
 }
 

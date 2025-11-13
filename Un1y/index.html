@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiun 1 tuổi</title>
+    <meta name="description" content="Mừng sinh nhật 1 tuổi của bé Chiun">
+    <link rel="icon" href="../images/Un1yFavicon.svg" type="image/svg+xml"> <!--32-->
+    <link rel="apple-touch-icon" href="src/favicon.png"> <!--180-->
+
+    <!--facebook-->
+    <meta property="og:title" content="Chiun 1 tuổi">
+    <meta property="og:description" content="Mừng sinh nhật 1 tuổi của bé Chiun.">
+    <meta property="og:image" content="https://NguyenChamMemories.id.vn/images/thumbs/Un1yThumbnail.jpg">
+    <meta property="og:url" content="https://NguyenChamMemories.id.vn/Un1y/">
+    <meta property="og:type" content="website">
+    <!--X-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chiun 1 tuổi">
+    <meta name="twitter:description" content="Mừng sinh nhật 1 tuổi của bé Chiun.">
+    <meta name="twitter:image" content="https://NguyenChamMemories.id.vn/images/thumbs/Un1yThumbnail.jpg">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/entrance.css" />
+    <link rel="stylesheet" href="css/emphasis.css" />
+    <link rel="stylesheet" href="css/exit.css" />
+    <style>
+        .inactive {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="frm inactive" id="frmWelcome">
+        <h4>Mừng sinh nhật HaChiun</h4>
+        <div class="countdown">
+            <div class="timecard" id="days">10</div>
+            <div class="timecard" id="hours">10</div>
+            <div class="timecard" id="minutes">10</div>
+            <div class="timecard" id="secondes">10</div>
+        </div>
+        <div class="frmCtrls">
+            <button class="btn" id="btnWish">Gửi lời chúc</button>
+            <button class="btn action" id="btnPlay">Xem </button>
+        </div>
+    </section>
+    <section class="frm inactive" id="frmWishes">
+        <h1>Gửi lời chúc đến Chiun</h1>
+        <lable for="name" class="lbl" id="lblName">Người gửi:</lable>
+        <input type="text" class="inp" id="inpName" name="name" placeholder="Tên">
+        <lable for="wishes" class="lbl" id="lblWishes">Lời chúc:</lable>
+        <textarea type="text" class="inp" id="inpWishes" name="wishes" placeholder="Nội dung"></textarea>
+        <div class="frmCtrls">
+            <button class="btn back" id="btnWelcome">Quay lại</button>
+            <button class="btn action" id="btnSendWishes">Gửi</button>
+        </div>
+    </section>
+    <div class="slideshow inactive" id="slideshow">
+        <div id="wishes-wrapper">
+        </div>
+    </div>
+    <div id="preload" style="display: none; height: 0; width: 0; padding: 0; margin: 0; overflow: hidden;">
+        <img id="preloadImg" style="display: none; height: 0; width: 0; padding: 0; margin: 0;" />
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/slideshow.js"></script>
+</body>
+
+</html>
