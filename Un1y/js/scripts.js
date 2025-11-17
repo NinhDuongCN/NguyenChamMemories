@@ -1,4 +1,4 @@
-const totalImages = 339; //update 16.11.2025
+const totalImages = 341; //update 17.11.2025
 const totalAudios = 18;
 const folderImages = "images";
 const folderAudios = "audios";
