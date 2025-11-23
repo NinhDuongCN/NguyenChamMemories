@@ -207,7 +207,7 @@ section.frm {
     bottom: .2lh;
     width: 90svw;
     max-width: 600px;
-    height: 8rem;
+    height: 24vh;
     overflow: hidden;
 }
 
@@ -232,12 +232,12 @@ section.frm {
 }
 
 .wish-item.pre {
-    bottom: 8rem;
+    bottom: 24vh;
     opacity: 0;
 }
 
 .wish-item.next {
-    bottom: -8rem;
+    bottom: -24vh;
     opacity: 0;
 }
 
