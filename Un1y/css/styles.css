@@ -207,7 +207,7 @@ section.frm {
     bottom: .2lh;
     width: 90svw;
     max-width: 600px;
-    height: 24vh;
+    height: max(24vh, 6.5rem);
     overflow: hidden;
 }
 

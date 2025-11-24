@@ -1,4 +1,4 @@
-const totalImages = 362; //update 23.11.2025
+const totalImages = 365; //update 24.11.2025
 const totalAudios = 18;
 const folderImages = "images";
 const folderAudios = "audios";
@@ -292,7 +292,8 @@ function showIntro() {
     intro.style.fontSize = "x-large";
     intro.style.fontWeight = "bold";
     intro.style.transition = "all ease 1s";
-    intro.textContent = `Tháng 11 này`;
+    // intro.textContent = `Tháng 11 này`;
+    intro.textContent = `Tháng 11`;
     intro.style.opacity = 0;
     document.body.appendChild(intro);
     setTimeout(() => {
