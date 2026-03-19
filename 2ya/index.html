@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-03-2026</title>
+
+    <link rel="shortcut icon" type="image/icon" href="../images/MemoriesFavicon.svg" />
+
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://www.NguyenChamMemories.id.vn/WDi/imgs/thumbnail.png"">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="20-03-2026">
+    <meta property="og:url" content="https://www.NguyenChamMemories.id.vn/2ya">
+    <meta property="og:description" content="NguyênChâm">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+        body{
+            background: rgb(24, 18, 18);
+            overflow: hidden;
+        }
+        button{
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            color: aqua;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background ease .3s,
+                        color ease .3s;
+        }
+        button::before{
+            content: "▶";
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-left: .4rem;
+            display: block;
+        }
+        button:hover{
+            background: aqua;
+            color: #333;
+            border: none;
+        }
+        canvas,
+        audio{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="play-button"></button>
+    <canvas id="canvas"></canvas>
+    <audio id="audio">
+        <source src="./music.mp3" type="audio/mpeg">
+        Trình duyệt không hỗ trợ audio.
+    </audio>
+
+    <script>
+        const btn = document.getElementById("play-button");
+        const canvas = document.getElementById("canvas");
+        const audio = document.getElementById("audio");
+
+        btn.addEventListener('click', () => {
+            audio.play();
+        });
+        const ctx = canvas.getContext("2d");
+        function drawHeart(scale, color){
+            ctx.beginPath();
+            const x0 = canvas.width/2;
+            const y0 = canvas.height/2;
+            let x = 0;
+            let y = scale * 5;
+            ctx.moveTo(x0 + x, y0 - y);
+            for(let t = 0.01; t <= Math.PI * 2; t+=0.01){
+                x = scale * 16 * Math.pow(Math.sin(t), 3);
+                y = scale * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
+                ctx.lineTo(x0 + x, y0 - y);
+            }
+            ctx.strokeStyle = color;
+            ctx.stroke();
+        }
+
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const analyser = audioCtx.createAnalyser();
+        const source = audioCtx.createMediaElementSource(audio);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        analyser.fftSize = 256;
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        function animate(){
+            requestAnimationFrame(animate);
+            analyser.getByteFrequencyData(dataArray);
+            const beat = dataArray[10] / 255;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for(let i = 0; i < 9; i++){
+                drawHeart(1+i+beat*2,
+                         `hsl(${(i*40+beat*100)%360}, 100%, 50%)`
+                );
+            }
+        }
+        
+        audio.onplay = () => {
+            btn.style.display = 'none';
+            canvas.style.display = 'block';
+            audioCtx.resume();
+            animate();
+        }
+    </script>
+</body>
+</html>
