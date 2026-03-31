@@ -132,6 +132,12 @@ noscript::after{
 .app#Un1y{
     background-image: url('./images/Un1yFavicon.svg');
 }
+.app#_2ya{
+    background-image: url('./images/2yaFavicon.svg');
+}
+.app#Longin{
+    background-image: url('./images/LonginFavicon.svg');
+}
 
 #divMain{
     width: 100%;
@@ -187,6 +193,12 @@ noscript::after{
     }
     .app#Un1y{
         grid-area: 1 / 3 / 2 / 4;
+    }
+    .app#Longin{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .app#_2ya{
+        grid-area: 1 / 1 / 2 / 2;
     }
 }
 
